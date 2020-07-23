@@ -4,7 +4,9 @@ body, button, html, input, select, textarea {
   line-height: 20px;
 }
 
-
+#assignTo{
+  float:left;
+}
 .newitem-title-wrapper {
   margin: 4px 10px;
 }
@@ -692,10 +694,10 @@ div .custom-switch{
       font-size:20px; 
     }
     .fa .fa-instagram{
-      font-size:40px;
+      font-size:40px!important;
     }
     .sidebar .fa{
-      font-size:22px
+      font-size:20px
     }
     
     
@@ -726,7 +728,7 @@ div .custom-switch{
       margin-top:20px;
     }
     .stickers li span{
-      font-size:14px;
+      font-size:12px;
     }
     .switch-bar{
       margin-left:530px;
@@ -767,23 +769,30 @@ div .custom-switch{
    @media (min-width:1366px) {
     #check{
       padding-left:50px;
-      font-size:18px;
+      font-size:15px;
     }
     #checkTitle{
       margin-left:-190px
     }
     #checkTitle select{
-      font-size:30px;
-    }
-    .user .fa{
-      font-size:30px;
-    }
-    .user input{
       font-size:25px;
     }
+    .user .fa{
+      font-size:25px;
+    }
+    .user input{
+      font-size:20px;
+    }
     .user img{
-      width:66px;
+      -webkit-transition: width .35s ease-in-out;
+      transition: width .35s ease-in-out;
+      width:55px;
       border-radius:20px;
+      margin-right:5px;
+    }
+    .user img:hover{
+      width:80px;
+      border-radius:50px;
       margin-right:5px;
     }
     .stickers{
@@ -791,14 +800,14 @@ div .custom-switch{
       margin-top:30px;
     }
     .switch-bar{
-      margin-left: 800px;
+      margin-left: 860px;
     }
     #switch-text{
-      font-size:16px;
+      font-size:14px;
     }
-    .fa .fa-instagram{
+    /*.fa .fa-instagram{
       font-size:50px!important;
-    }
+    }*/
     #card-edit{
       width: 50%;
       left: 50%;
