@@ -113,6 +113,12 @@ function addCardTrello(list) {
 			if(typeof imgURL=== 'object'){
 				readURL(imgURL);
 			}
+			else{
+					//registering card
+					list.board.registerCard(card, list.cards.length, status);
+					list.cardsNode.insertBefore(card.node, list.cards[list.cards.length - 1].node);
+					list.cards.push(card);
+			}
 			
 			function readURL(input) {			
 				if (input.files && input.files[0]) {
