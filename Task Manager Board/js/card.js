@@ -90,16 +90,31 @@ function Card(list, title,description,priorityLevel,attachment,status, createdAt
 		this.createdAtNode = document.createElement('p');		
 		this.createdAtNode.setAttribute('id','createdAt');
 		this.surroundDateTag = document.createElement('span');
+		if(this.attachmentNode!=null){
 		if(this.status == 'Done'){
 			this.createdAtNode.style.cssText =`width:45%; background-color:#1bd28ae6; box-sizing:border-box; color:white; min-height:25px;
-			margin: 0px 0px 0px 0px; padding: 0px; border-radius: 5px; text-align: center; display:inline-block; padding-top:2px`
+			margin: 0px 0px 0px 0px; padding: 0px; border-radius: 5px; text-align: center; display:inline-block; padding-top:2px; float:right;`
 			this.surroundDateTag.innerHTML = "<i class='fa fa-check' aria-hidden='true'></i>"+' '+this.createdAt.slice(0,-5);
 		}
 		else{
 			this.createdAtNode.style.cssText = `width:45%; background-color:rgba(211, 211, 211, 0.39); box-sizing:border-box;min-height:25px;
-			margin: 0px 0px 0px 0px; padding: 0px; border-radius: 5px; text-align: center; display:inline-block;padding-top:2px;`
+			margin: 0px 0px 0px 0px; padding: 0px; border-radius: 5px; text-align: center; display:inline-block;padding-top:2px;float:right;`
 			this.surroundDateTag.innerHTML = '<i class="fa fa-bell-o" aria-hidden="true"></i>'+' '+this.createdAt.slice(0,-5);
 		}
+	}
+	else{
+		if(this.status == 'Done'){
+			this.createdAtNode.style.cssText =`width:45%; background-color:#1bd28ae6; box-sizing:border-box; color:white; min-height:25px;
+			margin: 0px 0px 0px 0px; padding: 0px; border-radius: 5px; text-align: center; display:block; padding-top:2px;`
+			this.surroundDateTag.innerHTML = "<i class='fa fa-check' aria-hidden='true'></i>"+' '+this.createdAt.slice(0,-5);
+		}
+		else{
+			this.createdAtNode.style.cssText = `width:45%; background-color:rgba(211, 211, 211, 0.39); box-sizing:border-box;min-height:25px;
+			margin: 0px 0px 0px 0px; padding: 0px; border-radius: 5px; text-align: center; display:block;padding-top:2px;`
+			this.surroundDateTag.innerHTML = '<i class="fa fa-bell-o" aria-hidden="true"></i>'+' '+this.createdAt.slice(0,-5);
+		}
+
+	}
 				
 		this.createdAtNode.appendChild(this.surroundDateTag);
 		this.titleNode.appendChild(this.createdAtNode);
