@@ -69,7 +69,7 @@ function Card(list, title,description,priorityLevel,attachment,status, createdAt
 		this.priorityLevelNode.style.display = 'none';
 	}
 	
-	if(typeof this.attachment !== 'undefined'){
+	if(typeof this.attachment !== 'undefined' && this.attachment !== ''){
 		this.attachmentNode = document.createElement('IMG');
 		this.attachmentNode.setAttribute('width','100%');
 		this.attachmentNode.setAttribute('height','100%');
@@ -105,8 +105,9 @@ function Card(list, title,description,priorityLevel,attachment,status, createdAt
 		this.titleNode.appendChild(this.createdAtNode);
 	}
 	if(typeof this.assignTo!=='undefined'){
-		this.assignToNode = document.createElement('span');
+		this.assignToNode = document.createElement('p');
 		this.assignToNode.setAttribute('id','assignTo');
+		this.assignToNode.style.float='left'
 		this.assignToNode.appendChild(document.createTextNode(this.assignTo));
 		this.titleNode.appendChild(this.assignToNode);
 	}
